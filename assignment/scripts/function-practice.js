@@ -17,7 +17,7 @@ console.log('Test - should say "Hello World!"', hello());
 console.log('+++Personalized Hello+++');
 
 function helloName(name) {
-   return `Hello, ${name}!`;
+  return `Hello, ${name}!`;
 }
 // Remember to call the function to test
 console.log(helloName('Mary'));
@@ -38,7 +38,7 @@ function multiplyThree(a, b, c) {
   return answer;
 }
 
-console.log(multiplyThree(3,4,7));
+console.log(multiplyThree(3, 4, 7));
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
@@ -65,22 +65,28 @@ console.log('Is the amount greater than zero? ' + isPositive(0));
 //    array is empty, return `undefined`.
 console.log('+++Return the last item in an array+++');
 function getLast(array) {
-  if (array === 0); {
-    console.log()
+  if (array.length === 0) {
     return `undefined`;
-    }
   }
+  let lastIndex = array.length - 1
+  return array[lastIndex];
+}
 let AleciasArray = [];
 
+console.log('the last item in the empty array is: ' + getLast(AleciasArray));
+//returning the last item
+AleciasArray = [34, 16, 17, 23];
 console.log('the last item in the array is: ' + getLast(AleciasArray));
+
+
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 console.log('+++Finding a value in the array+++');
 function find(value, array) {
-  for (let i = 0; i < array.length; i++ ){
-    if ( value === array[i] ){
+  for (let i = 0; i < array.length; i++) {
+    if (value === array[i]) {
       return true;
     }
   }
